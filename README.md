@@ -1,4 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sky-Line Robotacon Score System
+
+Hệ thống quản lý cuộc thi Robotics dùng Next.js App Router, Supabase PostgreSQL và Vercel.
+
+## Local setup
+
+1. Sao chép `.env.example` thành `.env.local` ở thư mục root và điền các biến Supabase.
+2. Chạy migration `supabase/migrations/20261005000100_robotacon_initial.sql` trong Supabase SQL Editor.
+3. Tạo tài khoản Supabase Auth, sau đó tạo bản ghi tương ứng trong bảng `judges` với `user_id` là ID tài khoản.
+4. Khởi động:
+
+```bash
+npm install
+npm run dev
+```
+
+Mở `http://localhost:3000`.
+
+## Verification
+
+```bash
+npx tsc --noEmit
+npm run lint
+npm run build
+```
 
 ## Getting Started
 
